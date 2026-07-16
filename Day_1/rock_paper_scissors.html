@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DAY1 - Rock_paper_scissors
+        </title>
+    </head>
+    <body>
+        <p>
+            Rock paper scissors game
+        </p>
+        <!-- ROCK -->
+
+        <button onclick="
+        const computermoveee = moves[Math.floor(Math.random() * moves.length)];
+        console.log(`Computer move: ${computermoveee}`);
+        if(computermoveee === 'Rock') {
+            console.log('Tie');
+        }
+        else if(computermoveee === 'Paper') {
+            console.log('Computer wins');
+        }
+        else {
+            console.log('You win');
+        }">
+            Rock
+        </button>
+
+        <!-- Paper -->
+
+        <button onclick="const computermove = moves[Math.floor(Math.random() * moves.length)];
+        console.log(`Computer move: ${computermove}`);
+        if(computermove === 'Paper') {
+            console.log('Tie');
+        }
+        else if(computermove === 'Scissors') {
+            console.log('Computer wins');
+        }
+        else {
+            console.log('You win');
+        } ">
+            Paper
+        </button>
+
+        <!-- Scissors -->
+
+        <button onclick="
+        const computermovee = moves[Math.floor(Math.random() * moves.length)];
+        console.log(`Computer move: ${computermovee}`);
+        if(computermovee === 'Scissors') {
+            console.log('Tie');
+        }
+        else if(computermovee === 'Rock') {
+            console.log('Computer wins');
+        }
+        else {
+            console.log('You win');
+        } ">
+            Scissors
+        </button>
+    </body>
+    <script>
+        const moves = ['Rock', 'Paper', 'Scissors'];
+        
+       
+    </script>
+</html>
