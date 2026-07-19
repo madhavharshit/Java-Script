@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DAY3 - DOM_subscribe_button
+        </title>
+    </head>
+    <body>
+        <p> YouTube Subscribe Button </p>
+        <button class="js-subs-button" onclick='subscribe()'> Subscribe </button>
+    </body>
+    <script>
+         function subscribe(){
+            if(document.querySelector(".js-subs-button").innerHTML === " Subscribe "){
+                document.querySelector(".js-subs-button").innerHTML = " Subscribed ";
+            }
+            else{
+                document.querySelector(".js-subs-button").innerHTML = " Subscribe ";
+            }
+         }
+    </script>
+</html>
