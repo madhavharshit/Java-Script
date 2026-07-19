@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DAY3 - RPC_DOM
+        </title>
+    </head>
+    <body>
+        <p>
+            Rock paper scissors game
+        </p>
+        <button onclick="
+        const computermoveee = moves[Math.floor(Math.random() * moves.length)];
+        console.log(`Computer move: ${computermoveee}`);
+        if(computermoveee === 'Rock') {
+            document.querySelector('.js-result').innerHTML = `your move : Rock <br> Computer move :${computermoveee}<br>Tie<br> Draw : ${score.Draw} Computer : ${score.Computer} You : ${score.You}`;
+            score.Draw++;
+        }
+        else if(computermoveee === 'Paper') {
+            document.querySelector('.js-result').innerHTML = `your move : Rock <br> Computer move :${computermoveee}<br>Computer wins<br> Draw : ${score.Draw} Computer : ${score.Computer} You : ${score.You}`;
+            score.Computer++;
+        }
+        else {
+            document.querySelector('.js-result').innerHTML = `your move : Rock <br> Computer move :${computermoveee}<br>You win<br> Draw : ${score.Draw} Computer : ${score.Computer} You : ${score.You}`;
+            score.You++;
+        }">
+            Rock
+        </button>
+        <button onclick="const computermove = moves[Math.floor(Math.random() * moves.length)];
+        console.log(`Computer move: ${computermove}`);
+        if(computermove === 'Paper') {
+            document.querySelector('.js-result').innerHTML = `your move : Paper <br> Computer move :${computermove}<br>Tie<br> Draw : ${score.Draw} Computer : ${score.Computer} You : ${score.You}`;
+            score.Draw++;
+        }
+        else if(computermove === 'Scissors') {
+            document.querySelector('.js-result').innerHTML = `your move : Paper <br> Computer move :${computermove}<br>Computer wins <br> Draw : ${score.Draw} Computer : ${score.Computer} You : ${score.You}`;
+            score.Computer++;
+        }
+        else {
+            document.querySelector('.js-result').innerHTML = `your move : Paper <br> Computer move :${computermove}<br>You win<br> Draw : ${score.Draw} Computer : ${score.Computer} You : ${score.You}`;
+            score.You++;
+        } ">
+            Paper
+        </button>
+        <button onclick="
+        const computermovee = moves[Math.floor(Math.random() * moves.length)];
+        console.log(`Computer move: ${computermovee}`);
+        if(computermovee === 'Scissors') {
+            document.querySelector('.js-result').innerHTML = `your move : Scissors <br> Computer move :${computermovee}<br>Tie<br> Draw : ${score.Draw} Computer : ${score.Computer} You : ${score.You}`;
+            score.Draw++;
+        }
+        else if(computermovee === 'Rock') {
+            document.querySelector('.js-result').innerHTML = `your move : Scissors <br> Computer move :${computermovee}<br>Computer wins<br> Draw : ${score.Draw} Computer : ${score.Computer} You : ${score.You}`;
+            score.Computer++;
+        }
+        else {
+            document.querySelector('.js-result').innerHTML = `your move : Scissors <br> Computer move :${computermovee}<br>You win<br> Draw : ${score.Draw} Computer : ${score.Computer} You : ${score.You}`;
+            score.You++;
+        } ">
+            Scissors
+        </button>
+        <p class = "js-result">
+            your move : <br>
+            Computer move : <br>
+            <br>
+            Draw : 0 Computer : 0 You : 0<br>
+        </p>
+    </body>
+    <script>
+        const moves = ['Rock', 'Paper', 'Scissors'];
+        score = {
+            Draw : 0,
+            Computer : 0,
+            You : 0
+        };
+        
+    </script>
+    <!-- i know its not the optimized way to implement this game but i just wanted to learn this  -->
+</html>
